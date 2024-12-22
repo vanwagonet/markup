@@ -70,7 +70,7 @@ public extension Attribute<Tags.button> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#formtarget)
     @inlinable static func formTarget(_ target: Target) -> Self {
-        self.formTarget(target.rawValue)
+        .formTarget(target.rawValue)
     }
 
     /// Where to display the response from submitting the form, as the name for a browsing context.

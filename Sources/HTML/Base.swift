@@ -26,7 +26,7 @@ public extension Attribute<Tags.base> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base#target)
     @inlinable static func target(_ target: Target) -> Self {
-        self.target(target.rawValue)
+        .target(target.rawValue)
     }
 
     /// Default location to display linked URL, as the name for a browsing context.

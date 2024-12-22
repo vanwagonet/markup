@@ -50,7 +50,7 @@ public extension Attribute where Tag: HTMLTagName {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
     @inlinable static func `class`<S: StringProtocol>(_ classes: S...) -> Self {
-        self.class(classes)
+        .class(classes)
     }
 
     /// A space-separated list of the classes of the element.
@@ -132,7 +132,7 @@ public extension Attribute where Tag: HTMLTagName {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/exportparts)
     @inlinable static func exportParts<S: StringProtocol>(_ parts: S...) -> Self {
-        self.exportParts(parts)
+        .exportParts(parts)
     }
 
     /// Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
@@ -218,7 +218,7 @@ public extension Attribute where Tag: HTMLTagName {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/part)
     @inlinable static func part<S: StringProtocol>(_ parts: S...) -> Self {
-        self.part(parts)
+        .part(parts)
     }
 
     /// The part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the `::part` pseudo-element.

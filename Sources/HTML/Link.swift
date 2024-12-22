@@ -71,7 +71,7 @@ public extension Attribute<Tags.link> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#imagesizes)
     @inlinable static func imageSizes<S: StringProtocol>(_ sizes: S...) -> Self {
-        self.imageSizes(sizes)
+        .imageSizes(sizes)
     }
 
     /// For `.rel(.preload)` and `.as(.image)` only. One or more possible source sizes.

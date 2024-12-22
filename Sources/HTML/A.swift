@@ -103,7 +103,7 @@ public extension Attribute<Tags.a> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target)
     @inlinable static func target(_ target: Target) -> Self {
-        self.target(target.rawValue)
+        .target(target.rawValue)
     }
 
     /// Where to display the linked URL, as the name for a browsing context.

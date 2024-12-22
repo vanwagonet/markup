@@ -107,7 +107,7 @@ public extension Attribute<Tags.img> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#sizes)
     @inlinable static func sizes<S: StringProtocol>(_ sizes: S...) -> Self {
-        self.sizes(sizes)
+        .sizes(sizes)
     }
 
     /// One or more possible source sizes.

@@ -76,7 +76,7 @@ public extension Attribute<Tags.form> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#novalidate)
     @inlinable static var noValidate: Self {
-        Self("novalidate", value: nil)
+        Self("novalidate")
     }
 
     /// Controls the annotations and what kinds of links the form creates.
@@ -106,7 +106,7 @@ public extension Attribute<Tags.form> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#target)
     @inlinable static func target(_ target: Target) -> Self {
-        self.target(target.rawValue)
+        .target(target.rawValue)
     }
 
     /// Where to display the response from submitting the form, as the name for a browsing context.
