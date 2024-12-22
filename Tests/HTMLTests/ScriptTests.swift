@@ -16,7 +16,7 @@ struct ScriptTests {
     }
 
     @Test func inline() throws {
-        renderer.render(Script { InlineScriptContent("<!-- <!- <scrip <script </script") })
+        renderer.render(Script("<!-- <!- <scrip <script </script"))
         #expect(renderer.string == #"<script>\x3C!-- <!- <scrip \x3Cscript \x3C/script</script>"#)
     }
 

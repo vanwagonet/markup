@@ -30,6 +30,33 @@ public extension Script {
     init(src: any StringProtocol, _ attributes: [Attribute]) where Children == Empty {
         self.init([ Attribute("src", value: Text(verbatim: src)) ] + attributes)
     }
+
+    /// Creates an element with these attributes and children.
+    ///
+    /// - Parameters:
+    ///   - attributes: The list of attributes.
+    ///   - content: Script content for this element.
+    @inlinable init(_ attributes: [Attribute], _ content: String) where Children == InlineScriptContent {
+        self.init(attributes) { InlineScriptContent(content) }
+    }
+
+    /// Creates an element with these attributes and children.
+    ///
+    /// - Parameters:
+    ///   - attributes: The list of attributes.
+    ///   - content: Script content for this element.
+    @inlinable init(_ attributes: Attribute..., content: String) where Children == InlineScriptContent {
+        self.init(attributes) { InlineScriptContent(content) }
+    }
+
+    /// Creates an element with these attributes and children.
+    ///
+    /// - Parameters:
+    ///   - attributes: The list of attributes.
+    ///   - content: Script content for this element.
+    @inlinable init(_ content: String) where Children == InlineScriptContent {
+        self.init { InlineScriptContent(content) }
+    }
 }
 
 public extension Attribute<Tags.script> {

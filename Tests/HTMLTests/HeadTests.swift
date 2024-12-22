@@ -26,7 +26,7 @@ struct HeadTests {
                 Base()
                 Link()
                 Optional(Script(src: "."))
-                Style { "" }
+                Style("")
                 Title { "" }
             }
         })
