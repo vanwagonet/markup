@@ -13,6 +13,6 @@ public extension Attribute<Tags.dialog> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#open)
     @inlinable static var open: Self {
-        Self("open", value: nil)
+        Self("open")
     }
 }

@@ -77,7 +77,7 @@ public extension Attribute<Tags.img> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#ismap)
     @inlinable static var isMap: Self {
-        Self("ismap", value: nil)
+        Self("ismap")
     }
 
     /// Indicates how the browser should load the image.

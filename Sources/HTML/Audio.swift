@@ -13,14 +13,14 @@ public extension Attribute<Tags.audio> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#autoplay)
     @inlinable static var autoPlay: Self {
-        Self("autoplay", value: nil)
+        Self("autoplay")
     }
 
     /// If this attribute is present, the browser will offer controls to allow the user to control audio playback.
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#controls)
     @inlinable static var controls: Self {
-        Self("controls", value: nil)
+        Self("controls")
     }
 
     /// Indicates if the fetching of the audio file must be done using a CORS request.
@@ -37,14 +37,14 @@ public extension Attribute<Tags.audio> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#loop)
     @inlinable static var loop: Self {
-        Self("loop", value: nil)
+        Self("loop")
     }
 
     /// A Boolean attribute that indicates whether the audio will be initially silenced.
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#muted)
     @inlinable static var muted: Self {
-        Self("muted", value: nil)
+        Self("muted")
     }
 
     /// A hint to the browser about what the author thinks will lead to the best user experience.

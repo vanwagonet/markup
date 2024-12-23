@@ -15,6 +15,11 @@ struct GlobalAttributeTests {
         #expect(renderer.string == #"<br autocapitalize="on">"#)
     }
 
+    @Test func autoCorrect() throws {
+        renderer.render(Br(.autoCorrect(.on)))
+        #expect(renderer.string == #"<br autocorrect="on">"#)
+    }
+
     @Test func autoFocus() throws {
         renderer.render(Br(.autoFocus))
         #expect(renderer.string == #"<br autofocus>"#)

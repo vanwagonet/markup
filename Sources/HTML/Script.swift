@@ -68,7 +68,7 @@ public extension Attribute<Tags.script> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#async)
     @inlinable static var async: Self {
-        Self("async", value: nil)
+        Self("async")
     }
 
     /// Normal script elements pass minimal information to the window.onerror for scripts which do not pass the standard CORS checks. To allow error logging for sites which use a separate domain for static media, use this attribute.
@@ -85,7 +85,7 @@ public extension Attribute<Tags.script> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#defer)
     @inlinable static var `defer`: Self {
-        Self("defer", value: nil)
+        Self("defer")
     }
 
     /// Provides a hint of the relative priority to use when fetching an external script.
@@ -109,7 +109,7 @@ public extension Attribute<Tags.script> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#nomodule)
     @inlinable static var noModule: Self {
-        Self("nomodule", value: nil)
+        Self("nomodule")
     }
 
     /// A cryptographic nonce (number used once) to allow scripts in a script-src Content-Security-Policy

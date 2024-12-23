@@ -36,11 +36,21 @@ public extension Attribute where Tag: HTMLTagName {
         Self("autocapitalize", value: Text(verbatim: hint.rawValue))
     }
 
+    /// The autocorrect global attribute is an enumerated attribute that controls whether autocorrection of editable text is enabled for spelling and/or punctuation errors.
+    ///
+    /// - Parameters:
+    ///   - enabled: Whether or not autocorrect is enabled.
+    ///
+    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autocorrect)
+    @inlinable static func autoCorrect(_ enabled: AutoCorrectEnabled) -> Self {
+        Self("autocorrect", value: Text(verbatim: enabled.rawValue))
+    }
+
     /// Indicates that an element is to be focused on page load, or as soon as the `<dialog>` it is part of is displayed.
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autofocus)
     @inlinable static var autoFocus: Self {
-        Self("autofocus", value: nil)
+        Self("autofocus")
     }
 
     /// A space-separated list of the classes of the element.
@@ -149,7 +159,7 @@ public extension Attribute where Tag: HTMLTagName {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)
     @inlinable static var hidden: Self {
-        Self("hidden", value: nil)
+        Self("hidden")
     }
 
     /// Defines a unique identifier (ID) which must be unique in the whole document.
@@ -166,7 +176,7 @@ public extension Attribute where Tag: HTMLTagName {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert)
     @inlinable static var inert: Self {
-        Self("inert", value: nil)
+        Self("inert")
     }
 
     /// Provides a hint to browsers about the type of virtual keyboard configuration to use when editing this element or its contents.
@@ -235,7 +245,7 @@ public extension Attribute where Tag: HTMLTagName {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover)
     @inlinable static var popover: Self {
-        Self("popover", value: nil)
+        Self("popover")
     }
 
     /// Assigns a slot in a shadow DOM shadow tree to an element: An element with a slot attribute is assigned to the slot created by the `<slot>` element
@@ -314,6 +324,16 @@ public enum AutoCapitalize: String {
     case on, sentences
     /// The first letter of each word should default to a capital letter; all other letters should default to lowercase.
     case words
+}
+
+/// Whether autocorrect should be enabled or disabled.
+///
+/// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autocorrect#value)
+public enum AutoCorrectEnabled: String {
+    /// Disable automatic correction of editable text.
+    case off
+    /// Enable automatic correction of spelling and punctuation errors.
+    case on
 }
 
 /// An enumerated attribute indicating if the element should be editable by the user.

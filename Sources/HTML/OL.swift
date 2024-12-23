@@ -13,7 +13,7 @@ public extension Attribute<Tags.ol> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#reversed)
     @inlinable static var reversed: Self {
-        Self("reversed", value: nil)
+        Self("reversed")
     }
 
     /// An integer to start counting from for the list items.

@@ -25,6 +25,6 @@ public extension Attribute<Tags.details> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#open)
     @inlinable static var open: Self {
-        Self("open", value: nil)
+        Self("open")
     }
 }

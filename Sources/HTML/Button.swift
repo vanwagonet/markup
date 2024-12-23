@@ -13,7 +13,7 @@ public extension Attribute<Tags.button> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#disabled)
     @inlinable static var disabled: Self {
-        Self("disabled", value: nil)
+        Self("disabled")
     }
 
     /// The `<form>` element to associate the button with (its form owner).
@@ -60,7 +60,7 @@ public extension Attribute<Tags.button> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#formnovalidate)
     @inlinable static var formNoValidate: Self {
-        Self("formnovalidate", value: nil)
+        Self("formnovalidate")
     }
 
     /// Where to display the response from submitting the form, as a keyword for a browsing context.

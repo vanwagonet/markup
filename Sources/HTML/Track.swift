@@ -14,7 +14,7 @@ public extension Attribute<Tags.track> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track#default)
     @inlinable static var `default`: Self {
-        Self("default", value: nil)
+        Self("default")
     }
 
     /// How the text track is meant to be used. If omitted the default kind is subtitles. If the attribute contains an invalid value, it will use metadata.

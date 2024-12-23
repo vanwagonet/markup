@@ -13,14 +13,14 @@ public extension Attribute<Tags.video> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#autoplay)
     @inlinable static var autoPlay: Self {
-        Self("autoplay", value: nil)
+        Self("autoplay")
     }
 
     /// If this attribute is present, the browser will offer controls to allow the user to control video playback.
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#controls)
     @inlinable static var controls: Self {
-        Self("controls", value: nil)
+        Self("controls")
     }
 
     /// Indicates if the fetching of the video file must be done using a CORS request.
@@ -47,21 +47,21 @@ public extension Attribute<Tags.video> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#loop)
     @inlinable static var loop: Self {
-        Self("loop", value: nil)
+        Self("loop")
     }
 
     /// A Boolean attribute that indicates whether the video will be initially silenced.
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#muted)
     @inlinable static var muted: Self {
-        Self("muted", value: nil)
+        Self("muted")
     }
 
     /// A Boolean attribute indicating that the video is to be played "inline", that is within the element's playback area.
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#playsinline)
     @inlinable static var playsInline: Self {
-        Self("playsinline", value: nil)
+        Self("playsinline")
     }
 
     /// A URL for an image to be shown while the video is downloading.

@@ -73,6 +73,6 @@ public extension Attribute<Tags.optgroup> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup#disabled)
     @inlinable static var disabled: Self {
-        Self("disabled", value: nil)
+        Self("disabled")
     }
 }

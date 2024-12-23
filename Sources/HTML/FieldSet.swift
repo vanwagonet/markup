@@ -14,7 +14,7 @@ public extension Attribute<Tags.fieldset> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset#disabled)
     @inlinable static var disabled: Self {
-        Self("disabled", value: nil)
+        Self("disabled")
     }
 
     /// This attribute takes the value of the id attribute of a `<form>` element you want the `<fieldset>` to be part of, even if it is not inside the form.

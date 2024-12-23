@@ -13,7 +13,7 @@ public extension Attribute<Tags.option> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#disabled)
     @inlinable static var disabled: Self {
-        Self("disabled", value: nil)
+        Self("disabled")
     }
 
     /// This attribute is text for the label indicating the meaning of the option.
@@ -31,7 +31,7 @@ public extension Attribute<Tags.option> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option#selected)
     @inlinable static var selected: Self {
-        Self("selected", value: nil)
+        Self("selected")
     }
 
     /// The content of this attribute represents the value to be submitted with the form, should this option be selected.
