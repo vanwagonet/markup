@@ -6,8 +6,8 @@ struct DetailsTests {
     let renderer = StringRenderer()
 
     @Test func basicAttributes() throws {
-        renderer.render(Details(.open))
-        #expect(renderer.string == #"<details open></details>"#)
+        renderer.render(Details(.name("grp"), .open))
+        #expect(renderer.string == #"<details name="grp" open></details>"#)
     }
 
     @Test func empty() throws {
