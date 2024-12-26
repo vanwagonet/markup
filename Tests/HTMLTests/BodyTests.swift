@@ -10,7 +10,7 @@ struct BodyTests {
             Body {
                 P {
                     Strong { "Hi" }
-                    Img(src: "")
+                    Img()
                     Text(String("Bye"))
                 }
                 P()
@@ -19,7 +19,7 @@ struct BodyTests {
         )
         #expect(
             renderer.string ==
-            #"<body><p><strong>Hi</strong><img src="">Bye</p><p></p><strong></strong></body>"#
+            #"<body><p><strong>Hi</strong><img>Bye</p><p></p><strong></strong></body>"#
         )
     }
 

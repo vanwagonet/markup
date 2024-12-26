@@ -8,4 +8,14 @@ import Markup
 public typealias Slot<Content: HTMLContent> = Element<Tags.slot, Content>
 extension Tags { public enum slot: HTMLTagName { public static let name = "slot" } }
 
-// TODO: Attributes
+public extension Attribute<Tags.slot> {
+    /// The slot's name. A named slot is a `<slot>` element with a name attribute.
+    ///
+    /// - Parameters:
+    ///   - name: The name of this slot.
+    ///
+    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot#name)
+    @inlinable static func name(_ name: any StringProtocol) -> Self {
+        Self("name", value: Text(verbatim: name))
+    }
+}

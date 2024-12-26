@@ -8,30 +8,6 @@ import Markup
 public typealias Link = VoidElement<Tags.link>
 extension Tags { public enum link: MetadataTagName { public static let name = "link" } }
 
-public extension Link {
-    /// Creates an link with the href URL and additional attributes.
-    ///
-    /// - Parameters:
-    ///   - href: The URL string of the resource.
-    ///   - attributes: Additional attributes.
-    ///
-    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#href)
-    init(href: any StringProtocol, _ attributes: Attribute...) {
-        self.init([ Attribute("href", value: Text(verbatim: href)) ] + attributes)
-    }
-
-    /// Creates an link with the href URL and additional attributes.
-    ///
-    /// - Parameters:
-    ///   - href: The URL string of the resource.
-    ///   - attributes: Additional attributes.
-    ///
-    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#href)
-    init(href: any StringProtocol, _ attributes: [Attribute]) {
-        self.init([ Attribute("href", value: Text(verbatim: href)) ] + attributes)
-    }
-}
-
 public extension Attribute<Tags.link> {
     /// It specifies the type of content being loaded by the `<link>`, which is necessary for request matching,
     /// application of correct content security policy, and setting of correct `Accept` request header.
@@ -52,6 +28,16 @@ public extension Attribute<Tags.link> {
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#crossorigin)
     @inlinable static func crossOrigin(_ policy: CORSPolicy) -> Self {
         Self("crossorigin", value: Text(verbatim: policy.rawValue))
+    }
+
+    /// This attribute specifies the URL of the linked resource. A URL can be absolute or relative.
+    ///
+    /// - Parameters:
+    ///   - href: The URL string of the resource.
+    ///
+    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#href)
+    @inlinable static func href(_ href: any StringProtocol) -> Self {
+        Self("href", value: Text(verbatim: href))
     }
 
     /// Hints at the human language of the linked URL.

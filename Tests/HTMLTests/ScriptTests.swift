@@ -6,7 +6,7 @@ struct ScriptTests {
     let renderer = StringRenderer()
 
     @Test func classic() throws {
-        renderer.render(Script(src: ".", [ .defer, .noModule, .type("text/javascript") ]))
+        renderer.render(Script(.src("."), .defer, .noModule, .type("text/javascript")))
         #expect(renderer.string == #"<script src="." defer nomodule type="text/javascript"></script>"#)
     }
 
@@ -27,7 +27,7 @@ struct ScriptTests {
 
     @Test func policyAttributes() throws {
         renderer.render(Script(
-            src: "#",
+            .src("#"),
             .async,
             .crossOrigin(.anonymous),
             .fetchPriority(.low),

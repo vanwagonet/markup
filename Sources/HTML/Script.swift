@@ -9,28 +9,6 @@ public typealias Script<Content: ScriptContent> = Element<Tags.script, Content>
 extension Tags { public enum script: MetadataTagName { public static let name = "script" } }
 
 public extension Script {
-    /// Creates a script with the src URL and additional attributes.
-    ///
-    /// - Parameters:
-    ///   - src: The URI of an external script.
-    ///   - attributes: Additional attributes.
-    ///
-    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#src)
-    init(src: any StringProtocol, _ attributes: Attribute...) where Children == Empty {
-        self.init([ Attribute("src", value: Text(verbatim: src)) ] + attributes)
-    }
-
-    /// Creates a script with the src URL and additional attributes.
-    ///
-    /// - Parameters:
-    ///   - src: The URI of an external script.
-    ///   - attributes: Additional attributes.
-    ///
-    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#src)
-    init(src: any StringProtocol, _ attributes: [Attribute]) where Children == Empty {
-        self.init([ Attribute("src", value: Text(verbatim: src)) ] + attributes)
-    }
-
     /// Creates an element with these attributes and children.
     ///
     /// - Parameters:
@@ -127,6 +105,16 @@ public extension Attribute<Tags.script> {
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#referrerpolicy)
     @inlinable static func referrerPolicy(_ policy: ReferrerPolicy) -> Self {
         Self("referrerpolicy", value: Text(verbatim: policy.rawValue))
+    }
+
+    /// This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.
+    ///
+    /// - Parameters:
+    ///   - src: The URI of an external script.
+    ///
+    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#src)
+    @inlinable static func src(_ src: any StringProtocol) -> Self {
+        Self("src", value: Text(verbatim: src))
     }
 
     /// This attribute indicates the type of script represented.

@@ -8,30 +8,6 @@ import Markup
 public typealias Img = VoidElement<Tags.img>
 extension Tags { public enum img: HTMLTagName { public static let name = "img" } }
 
-public extension Img {
-    /// Creates an image with the src URL and additional attributes.
-    ///
-    /// - Parameters:
-    ///   - src: The url string for the image content.
-    ///   - attributes: Additional attributes.
-    ///
-    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#src)
-    init(src: any StringProtocol, _ attributes: Attribute...) {
-        self.init([ Attribute("src", value: Text(verbatim: src)) ] + attributes)
-    }
-
-    /// Creates an image with the src URL and additional attributes.
-    ///
-    /// - Parameters:
-    ///   - src: The url string for the image content.
-    ///   - attributes: Additional attributes.
-    ///
-    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#src)
-    init(src: any StringProtocol, _ attributes: [Attribute]) {
-        self.init([ Attribute("src", value: Text(verbatim: src)) ] + attributes)
-    }
-}
-
 public extension Attribute<Tags.img> {
     /// Defines an alternative text description of the image.
     ///
@@ -118,6 +94,16 @@ public extension Attribute<Tags.img> {
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#sizes)
     @inlinable static func sizes<S>(_ sizes: S) -> Self where S: Sequence, S.Element: StringProtocol {
         Self("sizes", value: Text(verbatim: sizes.joined(separator: ", ")))
+    }
+
+    /// The image URL. Mandatory for the `<img>` element.
+    ///
+    /// - Parameters:
+    ///   - src: The url string for the image content.
+    ///
+    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#src)
+    @inlinable static func src(_ src: any StringProtocol) -> Self {
+        Self("src", value: Text(verbatim: src))
     }
 
     /// One or more possible image sources.

@@ -5,9 +5,9 @@ import Testing
 struct LinkTests {
     let renderer = StringRenderer()
 
-    @Test func basicAttributes() throws {
+    @Test func attributes() throws {
         renderer.render(Link(
-            href: "/style.css",
+            .href("/style.css"),
             .rel(.stylesheet),
             .type("text/css")
         ))
@@ -17,19 +17,13 @@ struct LinkTests {
         )
     }
 
-    @Test func empty() throws {
-        renderer.render(Link(href: "/"))
-        #expect(renderer.string == #"<link href="/">"#)
-    }
-
     @Test func globalAttributes() throws {
-        renderer.render(Link(href: "/", .class("cls", "one"), .id("i")))
-        #expect(renderer.string == #"<link href="/" class="cls one" id="i">"#)
+        renderer.render(Link(.class("cls", "one"), .id("i")))
+        #expect(renderer.string == #"<link class="cls one" id="i">"#)
     }
 
     @Test func policyAttributes() throws {
         renderer.render(Link(
-            href: "#",
             .hrefLang("en"),
             .crossOrigin(.anonymous),
             .integrity("aGFzaA=="),
@@ -38,7 +32,6 @@ struct LinkTests {
         ))
         #expect(renderer.string == """
         <link
-         href="#"
          hreflang="en"
          crossorigin="anonymous"
          integrity="aGFzaA=="
@@ -50,7 +43,6 @@ struct LinkTests {
 
     @Test func imageResponsiveAttributes() throws {
         renderer.render(Link(
-            href: "#",
             .as(.image),
             .rel(.preload),
             .imageSizes("(max-width: 400px) 400px", "800px"),
@@ -59,7 +51,6 @@ struct LinkTests {
         ))
         #expect(renderer.string == """
         <link
-         href="#"
          as="image"
          rel="preload"
          imagesizes="(max-width: 400px) 400px, 800px"

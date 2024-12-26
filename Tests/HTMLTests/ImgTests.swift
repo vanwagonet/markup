@@ -5,9 +5,9 @@ import Testing
 struct ImgTests {
     let renderer = StringRenderer()
 
-    @Test func basicAttributes() throws {
+    @Test func attributes() throws {
         renderer.render(Img(
-            src: "/image.png",
+            .src("/image.png"),
             .alt(Text("image")),
             .width(1024),
             .height(768)
@@ -18,24 +18,19 @@ struct ImgTests {
         )
     }
 
-    @Test func empty() throws {
-        renderer.render(Img(src: "/image.png"))
-        #expect(renderer.string == #"<img src="/image.png">"#)
-    }
-
     @Test func globalAttributes() throws {
-        renderer.render(Img(src: "/", .class("cls", "one"), .id("i")))
-        #expect(renderer.string == #"<img src="/" class="cls one" id="i">"#)
+        renderer.render(Img(.class("cls", "one"), .id("i")))
+        #expect(renderer.string == #"<img class="cls one" id="i">"#)
     }
 
     @Test func mapAttributes() throws {
-        renderer.render(Img(src: "#", .isMap, .useMap("#map")))
-        #expect(renderer.string == ##"<img src="#" ismap usemap="#map">"##)
+        renderer.render(Img(.isMap, .useMap("#map")))
+        #expect(renderer.string == ##"<img ismap usemap="#map">"##)
     }
 
     @Test func policyAttributes() throws {
         renderer.render(Img(
-            src: "#",
+            .src("#"),
             .crossOrigin(.anonymous),
             .decoding(.async),
             .elementTiming("i"),
@@ -56,7 +51,7 @@ struct ImgTests {
 
     @Test func responsiveAttributes() throws {
         renderer.render(Img(
-            src: "#",
+            .src("#"),
             .sizes("(max-width: 400px) 400px", "800px"),
             .srcSet(.width(("/400.png", 400), ("/800.png", 800))),
             .srcSet(.density("/1.png", ("/2.5.png", 2.5), ("/3.png", 3)))
