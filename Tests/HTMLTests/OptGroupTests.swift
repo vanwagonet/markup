@@ -5,18 +5,21 @@ import Testing
 struct OptGroupTests {
     let renderer = StringRenderer()
 
-    @Test func empty() throws {
-        renderer.render(OptGroup(label: Text(verbatim: "hi")))
-        #expect(renderer.string == #"<optgroup label="hi"></optgroup>"#)
+    @Test func attributes() throws {
+        renderer.render(OptGroup(.label(Text("")), .disabled))
+        #expect(renderer.string == #"<optgroup label="" disabled></optgroup>"#)
+    }
+
+    @Test func content() throws {
+        renderer.render(OptGroup(.label(Text(verbatim: "hi"))) {
+            // Div() Compile-time error
+            Option { "opt" }
+        })
+        #expect(renderer.string == #"<optgroup label="hi"><option>opt</option></optgroup>"#)
     }
 
     @Test func globalAttributes() throws {
-        renderer.render(OptGroup(label: Text(""), .class("cls", "one"), .id("i")))
+        renderer.render(OptGroup(.label(Text("")), .class("cls", "one"), .id("i")))
         #expect(renderer.string == #"<optgroup label="" class="cls one" id="i"></optgroup>"#)
-    }
-
-    @Test func optionalAttributes() throws {
-        renderer.render(OptGroup(label: Text(""), .disabled))
-        #expect(renderer.string == #"<optgroup label="" disabled></optgroup>"#)
     }
 }

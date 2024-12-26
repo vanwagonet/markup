@@ -5,8 +5,8 @@ import Markup
 /// The `<option>` HTML element is used to define an item contained in a `<select>`, an `<optgroup>`, or a `<datalist>` element.
 ///
 /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
-public typealias Option<Content: HTMLContent> = Element<Tags.option, Content>
-extension Tags { public enum option: HTMLTagName { public static let name = "option" } }
+public typealias Option = Element<Tags.option, Text>
+extension Tags { public enum option: TagName { public static let name = "option" } }
 
 public extension Attribute<Tags.option> {
     /// If this Boolean attribute is set, this option is not checkable.

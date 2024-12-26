@@ -6,12 +6,12 @@ struct OptionTests {
     let renderer = StringRenderer()
 
     @Test func empty() throws {
-        renderer.render(Option())
+        renderer.render(Option { "" })
         #expect(renderer.string == #"<option></option>"#)
     }
 
     @Test func globalAttributes() throws {
-        renderer.render(Option(.class("cls", "one"), .id("i")))
+        renderer.render(Option(.class("cls", "one"), .id("i")) { "" })
         #expect(renderer.string == #"<option class="cls one" id="i"></option>"#)
     }
 
