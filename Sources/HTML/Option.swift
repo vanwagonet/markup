@@ -6,7 +6,7 @@ import Markup
 ///
 /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
 public typealias Option = Element<Tags.option, Text>
-extension Tags { public enum option: TagName { public static let name = "option" } }
+extension Tags { public enum option: HTMLTagName { public static let name = "option" } }
 
 public extension Attribute<Tags.option> {
     /// If this Boolean attribute is set, this option is not checkable.

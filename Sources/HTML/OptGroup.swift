@@ -6,7 +6,7 @@ import Markup
 ///
 /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup)
 public typealias OptGroup<Content: OptGroupContent> = Element<Tags.optgroup, Content>
-extension Tags { public enum optgroup: TagName { public static let name = "optgroup" } }
+extension Tags { public enum optgroup: HTMLTagName { public static let name = "optgroup" } }
 
 public extension Attribute<Tags.optgroup> {
     /// If this Boolean attribute is set, none of the items in this option group are selectable.

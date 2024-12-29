@@ -5,9 +5,30 @@ import Testing
 struct IFrameTests {
     let renderer = StringRenderer()
 
-    @Test func empty() throws {
-        renderer.render(IFrame())
-        #expect(renderer.string == "<iframe></iframe>")
+    @Test func attributes() throws {
+        renderer.render(IFrame(
+            .allow("fullscreen"),
+            .height(10),
+            .loading(.eager),
+            .name("f"),
+            .referrerPolicy(.origin),
+            .sandbox(""),
+            .src("."),
+            .width(5)
+        ))
+        #expect(renderer.string == """
+        <iframe
+         allow="fullscreen"
+         height="10"
+         loading="eager"
+         name="f"
+         referrerpolicy="origin"
+         sandbox=""
+         src="."
+         width="5"
+        >
+        </iframe>
+        """.split(separator: "\n").joined())
     }
 
     @Test func globalAttributes() throws {
