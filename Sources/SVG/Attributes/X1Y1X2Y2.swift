@@ -1,6 +1,6 @@
 public protocol X1Y1X2Y2Tag: TagName {}
 
-// extension Tags.line: X1Y1X2Y2Tag {}
+extension Tags.line: X1Y1X2Y2Tag {}
 extension Tags.linearGradient: X1Y1X2Y2Tag {}
 
 public extension Attribute where Tag: X1Y1X2Y2Tag {

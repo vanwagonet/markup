@@ -29,7 +29,7 @@ public protocol XYTag: TagName {}
 // extension Tags.image: XYTag {}
 // extension Tags.mask: XYTag {}
 // extension Tags.pattern: XYTag {}
-// extension Tags.rect: XYTag {}
+extension Tags.rect: XYTag {}
 extension Tags.svg: XYTag {}
 extension Tags.text: XYTag {}
 // extension Tags.tspan: XYTag {}

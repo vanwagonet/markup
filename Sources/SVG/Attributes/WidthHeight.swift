@@ -29,7 +29,7 @@ public protocol WidthHeightTag: TagName {}
 // extension Tags.image: WidthHeightTag {}
 // extension Tags.mask: WidthHeightTag {}
 // extension Tags.pattern: WidthHeightTag {}
-// extension Tags.rect: WidthHeightTag {}
+extension Tags.rect: WidthHeightTag {}
 extension Tags.svg: WidthHeightTag {}
 extension Tags.use: WidthHeightTag {}
 
