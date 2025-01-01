@@ -11,7 +11,6 @@ extension Tags { public enum linearGradient: SVGTagName { public static let name
 public protocol GradientContent: Markup {}
 public protocol GradientContentTagName: TagName {}
 
-
 // Descriptive Elements
 extension Tags.desc: GradientContentTagName {}
 extension Tags.metadata: GradientContentTagName {}

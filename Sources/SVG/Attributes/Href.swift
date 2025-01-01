@@ -9,7 +9,7 @@ public protocol HrefTag: TagName {}
 extension Tags.linearGradient: HrefTag {}
 // extension Tags.mpath: HrefTag {}
 // extension Tags.pattern: HrefTag {}
-// extension Tags.radialGradient: HrefTag {}
+extension Tags.radialGradient: HrefTag {}
 extension Tags.script: HrefTag {}
 // extension Tags.set: HrefTag {}
 // extension Tags.textPath: HrefTag {}

@@ -2,7 +2,7 @@ public protocol CXCYTag: TagName {}
 
 extension Tags.circle: CXCYTag {}
 extension Tags.ellipse: CXCYTag {}
-// extension Tags.radialGradient: CXCYTag {}
+extension Tags.radialGradient: CXCYTag {}
 
 public extension Attribute where Tag: CXCYTag {
     /// The `cx` attribute defines the x-axis coordinate of a center point.

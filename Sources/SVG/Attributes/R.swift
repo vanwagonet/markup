@@ -1,7 +1,7 @@
 public protocol RTag: TagName {}
 
 extension Tags.circle: RTag {}
-// extension Tags.radialGradient: RTag {}
+extension Tags.radialGradient: RTag {}
 
 public extension Attribute where Tag: RTag {
     /// The `r` attribute defines the radius of a circle.
