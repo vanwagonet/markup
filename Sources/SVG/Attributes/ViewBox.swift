@@ -4,7 +4,7 @@ public protocol ViewBoxTag: TagName {}
 // extension Tags.pattern: ViewBoxTag {}
 extension Tags.svg: ViewBoxTag {}
 // extension Tags.symbol: ViewBoxTag {}
-// extension Tags.view: ViewBoxTag {}
+extension Tags.view: ViewBoxTag {}
 
 public typealias Number = Numeric & LosslessStringConvertible
 

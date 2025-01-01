@@ -31,9 +31,9 @@ public protocol TextContentTagName: TagName {}
 // extension Tags.set: TextContentTagName {}
 
 // Descriptive Elements
-// extension Tags.desc: TextContentTagName {}
-// extension Tags.metadata: TextContentTagName {}
-// extension Tags.title: TextContentTagName {}
+extension Tags.desc: TextContentTagName {}
+extension Tags.metadata: TextContentTagName {}
+extension Tags.title: TextContentTagName {}
 
 // Text content child Elements
 // extension Tags.textPath: TextContentTagName {}

@@ -6,7 +6,7 @@ public protocol PreserveAspectRatioTag: TagName {}
 // extension Tags.pattern: PreserveAspectRatioTag {}
 extension Tags.svg: PreserveAspectRatioTag {}
 // extension Tags.symbol: PreserveAspectRatioTag {}
-// extension Tags.view: PreserveAspectRatioTag {}
+extension Tags.view: PreserveAspectRatioTag {}
 
 public extension Attribute where Tag: PreserveAspectRatioTag {
     /// The `preserveAspectRatio` attribute indicates how an element with a `viewBox` providing a given aspect ratio must fit into a viewport with a different aspect ratio.

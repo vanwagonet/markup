@@ -11,9 +11,9 @@ public protocol AnimationOrDescriptiveContentTagName: TagName {}
 // extension Tags.set: AnimationOrDescriptiveContentTagName {}
 
 // Descriptive Elements
-// extension Tags.desc: AnimationOrDescriptiveContentTagName {}
-// extension Tags.metadata: AnimationOrDescriptiveContentTagName {}
-// extension Tags.title: AnimationOrDescriptiveContentTagName {}
+extension Tags.desc: AnimationOrDescriptiveContentTagName {}
+extension Tags.metadata: AnimationOrDescriptiveContentTagName {}
+extension Tags.title: AnimationOrDescriptiveContentTagName {}
 
 extension Array: AnimationOrDescriptiveContent where Element: AnimationOrDescriptiveContent {}
 extension Comment: AnimationOrDescriptiveContent {}

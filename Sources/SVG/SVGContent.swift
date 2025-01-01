@@ -10,4 +10,5 @@ extension Either: SVGContent where True: SVGContent, False: SVGContent {}
 extension Empty: SVGContent {}
 extension Optional: SVGContent where Wrapped: SVGContent {}
 extension Pair: SVGContent where First: SVGContent, Second: SVGContent {}
+extension Text: SVGContent {}
 extension VoidElement: SVGContent where Tag: SVGTagName {}

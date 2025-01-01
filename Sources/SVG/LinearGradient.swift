@@ -13,9 +13,9 @@ public protocol GradientContentTagName: TagName {}
 
 
 // Descriptive Elements
-// extension Tags.desc: GradientContentTagName {}
-// extension Tags.metadata: GradientContentTagName {}
-// extension Tags.title: GradientContentTagName {}
+extension Tags.desc: GradientContentTagName {}
+extension Tags.metadata: GradientContentTagName {}
+extension Tags.title: GradientContentTagName {}
 
 // Specific Elements
 // extension Tags.animate: GradientContentTagName {}
