@@ -32,7 +32,7 @@ public protocol XYTag: TagName {}
 extension Tags.rect: XYTag {}
 extension Tags.svg: XYTag {}
 extension Tags.text: XYTag {}
-// extension Tags.tspan: XYTag {}
+extension Tags.tspan: XYTag {}
 extension Tags.use: XYTag {}
 
 public typealias Length = LosslessStringConvertible

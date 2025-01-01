@@ -5,7 +5,7 @@ public protocol DXDYTag: TagName {}
 // extension Tags.glyphRef: DXDYTag {}
 extension Tags.text: DXDYTag {}
 // extension Tags.tref: DXDYTag {}
-// extension Tags.tspan: DXDYTag {}
+extension Tags.tspan: DXDYTag {}
 
 public extension Attribute where Tag: DXDYTag {
     /// The `dx` attribute indicates a shift along the x-axis on the position of an element or its content.

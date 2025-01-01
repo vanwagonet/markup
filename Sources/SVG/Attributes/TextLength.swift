@@ -3,7 +3,7 @@ public protocol TextLengthTag: TagName {}
 extension Tags.text: TextLengthTag {}
 // extension Tags.textPath: TextLengthTag {}
 // extension Tags.tref: TextLengthTag {}
-// extension Tags.tspan: TextLengthTag {}
+extension Tags.tspan: TextLengthTag {}
 
 public extension Attribute where Tag: TextLengthTag {
     /// The `lengthAdjust` attribute controls how the text is stretched into the length defined by the `textLength` attribute.

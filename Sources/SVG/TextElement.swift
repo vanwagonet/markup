@@ -16,6 +16,16 @@ public extension Attribute<Tags.text> {
     ///
     /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text#rotate)
     @inlinable static func rotate(_ values: any Number...) -> Self {
+        .rotate(values)
+    }
+
+    /// Rotates orientation of each individual glyph. Can rotate glyphs individually.
+    ///
+    /// - Parameters:
+    ///   - values: The rotation of glyphs, in degrees.
+    ///
+    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text#rotate)
+    @inlinable static func rotate<S>(_ values: S) -> Self where S: Sequence, S.Element == any Number {
         Self("rotate", value: Text(verbatim: values.map { String($0) }.joined(separator: " ")))
     }
 }
@@ -38,7 +48,7 @@ extension Tags.title: TextContentTagName {}
 // Text content child Elements
 // extension Tags.textPath: TextContentTagName {}
 // extension Tags.tref: TextContentTagName {}
-// extension Tags.tspan: TextContentTagName {}
+extension Tags.tspan: TextContentTagName {}
 
 // Specific Elements
 // extension Tags.a: TextContentTagName {}

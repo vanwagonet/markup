@@ -2,28 +2,28 @@ import SVG
 import Testing
 
 @Suite
-struct TextTests {
+struct TSpanTests {
     let renderer = StringRenderer()
 
     @Test func attributes() throws {
-        renderer.render(TextElement(
+        renderer.render(TSpan(
             .x(1), .y(2), .dx("5%"), .dy(1.2),
             .rotate(30, 45, 360),
             .textLength(12),
             .lengthAdjust(.spacingAndGlyphs)
         ) { TSpan { "content" } })
         #expect(renderer.string == """
-        <text
+        <tspan
          x="1" y="2" dx="5%" dy="1.2"
          rotate="30 45 360"
          textLength="12"
          lengthAdjust="spacingAndGlyphs"
-        ><tspan>content</tspan></text>
+        ><tspan>content</tspan></tspan>
         """.split(separator: "\n").joined())
     }
 
     @Test func coreAttributes() throws {
-        renderer.render(TextElement(.class("cls"), .id("i")) {})
-        #expect(renderer.string == #"<text class="cls" id="i" />"#)
+        renderer.render(TSpan(.class("cls"), .id("i")) {})
+        #expect(renderer.string == #"<tspan class="cls" id="i" />"#)
     }
 }
