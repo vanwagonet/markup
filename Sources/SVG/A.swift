@@ -26,16 +26,6 @@ public extension Attribute<Tags.a> {
         Self("download", value: filename)
     }
 
-    /// The URL that the hyperlink points to.
-    ///
-    /// - Parameters:
-    ///   - url: The URL string that the hyperlink points to.
-    ///
-    /// [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/a#href)
-    @inlinable static func href(_ url: any StringProtocol) -> Self {
-        Self("href", value: Text(verbatim: url))
-    }
-
     /// Hints at the human language of the linked URL.
     ///
     /// - Parameters:

@@ -1,6 +1,6 @@
 public protocol HrefTag: TagName {}
 
-// extension Tags.a: HrefTag {}
+extension Tags.a: HrefTag {}
 // extension Tags.animate: HrefTag {}
 // extension Tags.animateMotion: HrefTag {}
 // extension Tags.animateTransform: HrefTag {}

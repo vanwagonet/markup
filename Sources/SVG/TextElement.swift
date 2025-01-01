@@ -51,7 +51,7 @@ extension Tags.title: TextContentTagName {}
 extension Tags.tspan: TextContentTagName {}
 
 // Specific Elements
-// extension Tags.a: TextContentTagName {}
+extension Tags.a: TextContentTagName {}
 
 extension Array: TextContent where Element: TextContent {}
 extension CData: TextContent {}
